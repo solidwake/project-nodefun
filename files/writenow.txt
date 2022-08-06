@@ -1,0 +1,2 @@
+This is the starter text file.
+Write to files this way.
