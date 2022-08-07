@@ -4,7 +4,7 @@
   "description": "node sandbox",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "nodemon log.js",
     "start": "node index.js"
   },
   "repository": {

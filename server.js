@@ -88,7 +88,7 @@ process.on('uncaughtException', err => {
     if (err) throw err;
     console.log('Write complete.');
 
-    // Append (Update) a file. Will also create a file if it doesn't exist
+    // Append (Update) a file. Will also create a file if it doesn't exist, will not create a directory
     fs.appendFile(path.join(__dirname, 'files', 'reply.txt'), '\nNow what do you want?', (err) => {
         if (err) throw err;
         console.log('Append complete.');
