@@ -1,4 +1,4 @@
-// Creates a log event
+//* Creates a log event
 const { format } = require('date-fns');
 const { v4: uuid } = require('uuid');
 const fs = require('fs');
