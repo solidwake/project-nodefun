@@ -1,0 +1,27 @@
+{
+  "name": "project-nodefun",
+  "version": "1.0.0",
+  "description": "node sandbox",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solidwake/project-nodefun.git"
+  },
+  "author": "Idris Westbrook",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solidwake/project-nodefun/issues"
+  },
+  "homepage": "https://github.com/solidwake/project-nodefun#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "date-fns": "^2.29.1",
+    "uuid": "^8.3.2"
+  }
+}
