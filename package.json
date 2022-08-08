@@ -2,10 +2,10 @@
   "name": "project-nodefun",
   "version": "1.0.0",
   "description": "node sandbox",
-  "main": "index.js",
+  "main": "web.js",
   "scripts": {
-    "dev": "nodemon log.js",
-    "start": "node index.js"
+    "dev": "nodemon web.js",
+    "start": "node web.js"
   },
   "repository": {
     "type": "git",
@@ -18,10 +18,12 @@
   },
   "homepage": "https://github.com/solidwake/project-nodefun#readme",
   "devDependencies": {
+    "eslint": "^8.21.0",
     "nodemon": "^2.0.19"
   },
   "dependencies": {
     "date-fns": "^2.29.1",
+    "dotenv": "^16.0.1",
     "uuid": "^8.3.2"
   }
 }
