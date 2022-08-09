@@ -33,24 +33,24 @@ console.log('Hello World');
   fetch: [AsyncFunction: fetch]
 } */
 
-//* Common Core Modules (CommonJS)
+// Common Core Modules (CommonJS)
 const os = require('os');
 const path = require('path');
-const math = require('./math'); //* Can be destructured - const { add, subtract, multiply, divide } = require(./math);
+const math = require('./math'); // Can be destructured - const { add, subtract, multiply, divide } = require(./math);
 // const fs = require('fs');
 const fsPromises = require('fs').promises;
 
-console.log(os.type()); //* Darwin (MacOS)
-console.log(os.version()); //* Darwin Kernel Version 20.6.0: Tue Jun 21 20:50:28 PDT 2022; root:xnu-7195.141.32~1/RELEASE_X86_64
-console.log(os.homedir()); //* /Users/idris
+console.log(os.type()); // Darwin (MacOS)
+console.log(os.version()); // Darwin Kernel Version 20.6.0: Tue Jun 21 20:50:28 PDT 2022; root:xnu-7195.141.32~1/RELEASE_X86_64
+console.log(os.homedir()); // /Users/idris
 
-console.log(__dirname); //* /Users/idris/Desktop/projects/project-nodefun
-console.log(__filename); //* /Users/idris/Desktop/projects/project-nodefun/server.js
+console.log(__dirname); // /Users/idris/Desktop/projects/project-nodefun
+console.log(__filename); // /Users/idris/Desktop/projects/project-nodefun/server.js
 
-//* Path
-console.log(path.dirname(__filename)); //* /Users/idris/Desktop/projects/project-nodefun
-console.log(path.basename(__filename)); //* server.js
-console.log(path.extname(__filename)); //* .js
+// Path
+console.log(path.dirname(__filename)); // /Users/idris/Desktop/projects/project-nodefun
+console.log(path.basename(__filename)); // server.js
+console.log(path.extname(__filename)); // .js
 console.log(path.parse(__filename));
 /* {
     root: '/',
@@ -60,10 +60,10 @@ console.log(path.parse(__filename));
     name: 'server'
 } */
 
-console.log(math.add(3, 4)); //* 7
+console.log(math.add(3, 4)); // 7
 
-//* FS (File System)
-//* Read a file
+// FS (File System)
+// Read a file
 // fs.readFile('./files/starter.txt', /* 'utf8' parameter here removes the need for toString() */ (err, data) => {
 /*     if (err) throw err;
     console.log(data); // <Buffer 54 68 69 73 20 69 73 20 74 68 65 20 73 74 61 72 74 65 72 20 74 65 78 74 20 66 69 6c 65 2e>
@@ -83,17 +83,17 @@ process.on('uncaughtException', err => {
 }) */
 
 
-//* Write a file - Nesting isn't necessary here. This nesting simply ensures that the functions are excecuted sequentially. If not, the asynchronus nature of NodeJS will return/execute based on the event loop. This is actually the beginning of callback hell.
+// Write a file - Nesting isn't necessary here. This nesting simply ensures that the functions are excecuted sequentially. If not, the asynchronus nature of NodeJS will return/execute based on the event loop. This is actually the beginning of callback hell.
 /* fs.writeFile(path.join(__dirname, 'files', 'reply.txt'), 'Nice to meet you!', (err) => {
     if (err) throw err;
     console.log('Write complete.');
 
-    //* Append (Update) a file. Will also create a file if it doesn't exist, will not create a directory
+    // Append (Update) a file. Will also create a file if it doesn't exist, will not create a directory
     fs.appendFile(path.join(__dirname, 'files', 'reply.txt'), '\nNow what do you want?', (err) => {
         if (err) throw err;
         console.log('Append complete.');
 
-        //* Rename a file
+        // Rename a file
         fs.rename(path.join(__dirname, 'files', 'reply.txt'), './files/newreply.txt', (err) => {
             if (err) throw err;
             console.log('Rename complete.');
@@ -101,7 +101,7 @@ process.on('uncaughtException', err => {
     })
 }) */
 
-//* Promises
+// Promises
 const fileOpsRead = async () => {
     try {
         const data = await fsPromises.readFile(path.join(__dirname, 'files', 'starter.txt'), 'utf8');

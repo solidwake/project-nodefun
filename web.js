@@ -6,14 +6,14 @@ const dotenv = require('dotenv');
 
 dotenv.config({ path: './config/config.env' });
 
-//* Listens for and emits the event
+// Listens for and emits the event
 const logEvents = require('./events');
 
 const EventEmitter = require('events');
 
 class MyEmitter extends EventEmitter { }
 
-//* Initialize object
+// Initialize object
 const myEmitter = new MyEmitter();
 
 const PORT = process.env.PORT || 3500;
@@ -72,16 +72,16 @@ const server = http.createServer((req, res) => {
                     ? path.join(__dirname, 'views', req.url)
                     : path.join(__dirname, req.url);
 
-    //* Makes .html extension not required in the browser        
+    // Makes .html extension not required in the browser        
     if (!extension && req.url.slice(-1) !== '/') filePath += '.html';
 
     const fileExists = fs.existsSync(filePath);
 
     if (fileExists) {
-        //* Serve the file
+        // Serve the file
         serveFile(filePath, contentType, res);
     } else {
-        //* Redirects
+        // Redirects
         switch (path.parse(filePath).base) {
             case 'oldpage.html':
                 res.writeHead(301, {'Location': '/newpage.html'});
@@ -100,8 +100,8 @@ const server = http.createServer((req, res) => {
 
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
-/* //* Add listener for the log event
+/* // Add listener for the log event
 myEmitter.on('log', (msg) => logEvents(msg));
 
-//* Emit event
+// Emit event
 myEmitter.emit('log', 'log event emitted!'); */
