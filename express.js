@@ -16,4 +16,15 @@ app.get('/newpage(.html)?', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'newpage.html'));
 });
 
+app.get('/oldpage(.html)?', (req, res) => {
+    res.redirect(path.join(301, '/newpage.html')); // Express sens a 302 by default
+});
+
+app.get('/*', (req, res) => {
+    res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
+});
+
+// Route handlers
+
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
