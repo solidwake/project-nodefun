@@ -1,11 +1,40 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const cors = require('cors');
+const { logger } = require('./middleware/events');
 const dotenv = require('dotenv');
 
 dotenv.config({ path: './config/config.env' });
 
 const PORT = process.env.PORT || 3500;
+
+// Custom middleware logger
+app.use(logger);
+
+// Cross Origin Resource Sharing
+const whitelist = ['https://www.google.com', /* 'https://www.yoursite.com', 'https://yoursite.com', */ 'http://127.0.0.1:5500', 'http://locatlhost:5000']
+const corsOptions = {
+    origin: (origin, callback) => {
+        if (whitelist.indexOf(origin) !== -1) {
+            callback(null, true)
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    optionsSuccessStatus: 200
+}
+app.use(cors());
+
+// Built in Middleware to handle url encoded data (form data)
+// 'content-type: application/x-www-form-urlencoded'
+app.use(express.urlencoded({ extended:false }));
+
+// Built in Middleware for JSON
+app.use(express.json());
+
+// Built in Middleware for serving static files
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('^/$|/index(.html)?', (req, res) => {
     // res.sendFile('./views/index.html', { root: __dirname });
@@ -17,7 +46,7 @@ app.get('/newpage(.html)?', (req, res) => {
 });
 
 app.get('/oldpage(.html)?', (req, res) => {
-    res.redirect(path.join(301, '/newpage.html')); // Express sens a 302 by default
+    res.redirect(path.join(301, '/newpage.html')); // Express sends a 302 by default
 });
 
 // Route Handlers
