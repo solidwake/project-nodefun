@@ -19,3 +19,7 @@
 20220817	17:25:37	cc7f0886-508d-4af2-b67e-47c979b86125	GET	undefined	/
 20220817	17:25:37	5b592169-6bb9-4b26-b72b-da04bdce4d3e	GET	undefined	/css/style.css
 20220817	17:39:38	06c65263-2eff-4957-8a7e-c900824feac2	GET	undefined	/
+20220817	17:52:58	461dcd0a-a81b-450d-8815-695ba4becbf4	GET	undefined	/idris
+20220817	17:52:58	e6168c27-3d6d-47d8-92df-fc8e971e31cb	GET	undefined	/css/style.css
+20220817	18:00:14	efc85cca-c591-48f7-94e7-a7e1039fd2ca	GET	undefined	/idris
+20220817	18:00:14	33303d01-0aa3-49a2-b2d0-c10deebc17ad	GET	undefined	/css/style.css
