@@ -6,3 +6,16 @@
 20220817	13:19:01	8c1f39bb-e353-4aa7-ab39-e071a6e75534	GET	https://www.google.com	/
 20220817	15:21:38	04dc1c52-9fdc-440d-b014-82d95f7f491b	OPTIONS	https://www.google.com	/
 20220817	15:21:38	916f2db5-b20c-4f62-be46-88b44f1e4169	GET	https://www.google.com	/
+20220817	17:19:30	b4d497cc-a93d-4c82-9038-c166902e73fc	GET	undefined	/
+20220817	17:19:30	e81de0c7-08f5-4b56-bf7c-b8051c3708ff	GET	undefined	/css/style.css
+20220817	17:21:04	badc5da7-96af-417a-87fe-710a95746d60	GET	undefined	/
+20220817	17:21:04	32645645-80f8-4920-8203-66cf26f55044	GET	undefined	/css/style.css
+20220817	17:21:05	2d909853-3cbb-4588-b07c-e6d7b66f642c	GET	undefined	/
+20220817	17:21:05	acd2a87b-eb5b-4e8d-9d1a-84d41de6d642	GET	undefined	/css/style.css
+20220817	17:21:59	eb4fbf6f-d1dd-4931-b7c0-c3c3b496a3f0	GET	undefined	/
+20220817	17:21:59	eef3667f-1304-46aa-b900-04c7ab07f5d0	GET	undefined	/css/style.css
+20220817	17:23:49	d119f36d-54c1-4e2f-bf04-668c4ecec012	GET	undefined	/
+20220817	17:24:27	771b367b-55f0-4359-bf71-01ad82883433	GET	undefined	/
+20220817	17:25:37	cc7f0886-508d-4af2-b67e-47c979b86125	GET	undefined	/
+20220817	17:25:37	5b592169-6bb9-4b26-b72b-da04bdce4d3e	GET	undefined	/css/style.css
+20220817	17:39:38	06c65263-2eff-4957-8a7e-c900824feac2	GET	undefined	/
