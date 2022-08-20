@@ -36,22 +36,15 @@ app.use(express.json());
 
 // Built in Middleware for serving static files
 app.use(express.static(path.join(__dirname, '/public')));
+app.use('/subdir', express.static(path.join(__dirname, '/public')));
 
-app.get('^/$|/index(.html)?', (req, res) => {
-    // res.sendFile('./views/index.html', { root: __dirname });
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
-});
-
-app.get('/newpage(.html)?', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'newpage.html'));
-});
-
-app.get('/oldpage(.html)?', (req, res) => {
-    res.redirect(path.join(301, '/newpage.html')); // Express sends a 302 by default
-});
+// Routes
+app.use('/', require('./routes/root'));
+app.use('/subdir', require('./routes/subdir'));
+app.use('/employees', require('./routes/api/employees'));
 
 // Route Handlers
-app.get('/hello(.html)?', (req, res, next) => {
+/* app.get('/hello(.html)?', (req, res, next) => {
     console.log('attempted to load hello.html');
     next()
 }, (req, res) => {
@@ -74,7 +67,7 @@ const three = (req, res, next) => {
     res.send('Finished!');
 }
 
-app.get('/chain(.html)?', [one, two, three]);
+app.get('/chain(.html)?', [one, two, three]); */
 
 app.all('*', (req, res) => {
     res.status(404);

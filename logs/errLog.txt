@@ -1,2 +1,10 @@
 20220808	22:44:54	118135a9-20e9-4e63-85bc-460b3f3495ab	TypeError: fsPromises.readFil is not a function
 20220817	17:39:38	fb3b3914-f96a-4eb6-a659-9dac15f4b248	Error: Not allowed by CORS
+20220817	22:57:26	ebb260e6-bc0c-45e4-9bc4-1074132f46ff	Error: ENOENT: no such file or directory, stat '/Users/idris/Desktop/projects/project-nodefun/routes/views/index.html'
+20220817	23:05:58	759738fa-735c-41b6-bc2e-4c0ee01bfa56	TypeError: The "path" argument must be of type string. Received type number (301)
+20220817	23:06:32	d5017a35-2bdc-484b-8662-acddf43ea947	TypeError: The "path" argument must be of type string. Received type number (301)
+20220817	23:07:41	de145c9a-8645-42a5-9406-a582448dca33	TypeError: The "path" argument must be of type string. Received type number (301)
+20220817	23:07:42	d3554694-b161-41c0-b38a-feaf149099ca	TypeError: The "path" argument must be of type string. Received type number (301)
+20220817	23:07:43	a05baaaf-ade0-467a-82be-59aa799c326a	TypeError: The "path" argument must be of type string. Received type number (301)
+20220817	23:11:40	14940510-4f34-415f-8dc0-1eddebc51279	TypeError: The "path" argument must be of type string. Received type number (301)
+20220817	23:14:38	cc159f6b-22d3-4b44-a37c-e8b228518db8	TypeError: The "path" argument must be of type string. Received type number (301)
