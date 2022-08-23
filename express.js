@@ -30,7 +30,8 @@ app.use(express.static(path.join(__dirname, '/public')));
 // Routes
 app.use('/', require('./routes/root'));
 app.use('/register', require('./routes/register'));
-app.use('/employees', require('./routes/api/employees'));
+app.use('/auth', require('./routes/auth'));
+app.use('/employees', require('./routes/employees'));
 
 // Route Handlers
 /* app.get('/hello(.html)?', (req, res, next) => {

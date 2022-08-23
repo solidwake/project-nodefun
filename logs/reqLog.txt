@@ -220,3 +220,7 @@
 20220822	22:14:16	cbaccb46-d146-4a12-b860-3e360997cf5b	GET	undefined	/register
 20220822	22:15:19	ac8e9daf-0255-42e9-9acb-61b18f6f80ea	POST	undefined	/register
 20220822	22:16:15	59bfdad3-88b9-47b3-9ce7-fabc933709ca	POST	undefined	/register
+20220822	22:41:54	e8e42672-a7e8-4b92-85dd-28865fb11440	POST	undefined	/auth
+20220822	22:42:08	49c14df5-8790-4ef8-badc-e65164200d8d	POST	undefined	/auth
+20220822	22:42:16	a734149a-c86c-4d7b-8351-1b393df840ee	POST	undefined	/auth
+20220822	22:42:38	73b0946e-367d-46e9-8025-82ef40b571d4	POST	undefined	/register
