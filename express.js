@@ -6,6 +6,7 @@ const corsOptions = require('./config/corsoptions');
 const { logger } = require('./middleware/events');
 const errorHandler = require('./middleware/errorhandler');
 const verifyJWT = require('./middleware/verifyjwt');
+const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv');
 
 dotenv.config({ path: './config/config.env' });
@@ -25,6 +26,9 @@ app.use(express.urlencoded({ extended:false }));
 // Built in Middleware for JSON
 app.use(express.json());
 
+// Middleware for cookies
+app.use(cookieParser());
+
 // Built in Middleware for serving static files
 app.use(express.static(path.join(__dirname, '/public')));
 
@@ -32,6 +36,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use('/', require('./routes/root'));
 app.use('/register', require('./routes/register'));
 app.use('/auth', require('./routes/auth'));
+app.use('/refresh', require('./routes/refresh'));
 app.use(verifyJWT);
 app.use('/employees', require('./routes/api/employees'));
 
