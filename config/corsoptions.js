@@ -1,14 +1,8 @@
-const whitelist = [
-    'https://www.google.com', 
-    /* 'https://www.yoursite.com', 
-    'https://yoursite.com', */ 
-    'http://127.0.0.1:5500', 
-    'http://locatlhost:5000'
-];
+const allowedOrigins = require('./allowedorigins');
 
 const corsOptions = {
     origin: (origin, callback) => {
-        if (whitelist.indexOf(origin) !== -1 || !origin) {
+        if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
             callback(null, true)
         } else {
             callback(new Error('Not allowed by CORS'));

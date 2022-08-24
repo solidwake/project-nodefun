@@ -249,3 +249,9 @@
 20220824	14:38:45	831bc71c-2c4f-410c-b66c-56474c8c71fc	GET	undefined	/refresh
 20220824	14:38:46	d3b76fe6-5ae4-4d9c-9612-822175fa9ee0	GET	undefined	/refresh
 20220824	14:38:50	af1a6bb8-56fd-4392-8fb2-116b2f1d1452	GET	undefined	/refresh
+20220824	15:21:08	e27e6cb1-e4cc-4189-a9fb-220ef8247511	POST	undefined	/auth
+20220824	15:21:15	871124fd-eaec-43a2-840b-273d327b302c	POST	undefined	/auth
+20220824	15:21:55	4a207e10-f23a-4af7-b6c1-ccd5fa298b8a	GET	undefined	/logout
+20220824	15:22:37	3066b655-a8d9-4147-9b6f-07b8e85cc893	GET	undefined	/refresh
+20220824	15:24:04	e84d193a-5bdc-49a5-9641-faf7a7002b18	POST	undefined	/auth
+20220824	15:24:45	96e39633-cee2-4f80-9d2d-e5217d2ffbfa	POST	undefined	/auth
