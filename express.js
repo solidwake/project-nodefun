@@ -4,7 +4,8 @@ const path = require('path');
 const cors = require('cors');
 const corsOptions = require('./config/corsoptions');
 const { logger } = require('./middleware/events');
-const errorHandler = require('./middleware/errorhandler')
+const errorHandler = require('./middleware/errorhandler');
+const verifyJWT = require('./middleware/verifyjwt');
 const dotenv = require('dotenv');
 
 dotenv.config({ path: './config/config.env' });
@@ -31,7 +32,8 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use('/', require('./routes/root'));
 app.use('/register', require('./routes/register'));
 app.use('/auth', require('./routes/auth'));
-app.use('/employees', require('./routes/employees'));
+app.use(verifyJWT);
+app.use('/employees', require('./routes/api/employees'));
 
 // Route Handlers
 /* app.get('/hello(.html)?', (req, res, next) => {
