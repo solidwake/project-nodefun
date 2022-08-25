@@ -255,3 +255,4 @@
 20220824	15:22:37	3066b655-a8d9-4147-9b6f-07b8e85cc893	GET	undefined	/refresh
 20220824	15:24:04	e84d193a-5bdc-49a5-9641-faf7a7002b18	POST	undefined	/auth
 20220824	15:24:45	96e39633-cee2-4f80-9d2d-e5217d2ffbfa	POST	undefined	/auth
+20220824	22:12:30	cf0f5850-a24f-445e-b815-feec8fa438f1	POST	undefined	/register
