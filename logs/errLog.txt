@@ -8,3 +8,8 @@
 20220817	23:07:43	a05baaaf-ade0-467a-82be-59aa799c326a	TypeError: The "path" argument must be of type string. Received type number (301)
 20220817	23:11:40	14940510-4f34-415f-8dc0-1eddebc51279	TypeError: The "path" argument must be of type string. Received type number (301)
 20220817	23:14:38	cc159f6b-22d3-4b44-a37c-e8b228518db8	TypeError: The "path" argument must be of type string. Received type number (301)
+20220825	00:03:11	2fa577ef-100d-4a2e-acd0-dcebe1ea9df5	TypeError: Cannot read properties of undefined (reading 'username')
+20220825	00:06:34	792f6c41-b3d8-4b7d-828c-ca767fb73cfa	TypeError: Cannot read properties of undefined (reading 'username')
+20220825	00:08:28	bdd7a825-e16c-469e-9a88-719a56e844a6	TypeError: Cannot read properties of undefined (reading 'username')
+20220825	00:12:24	62e4e006-ef0f-4794-a687-9dfc288407c9	TypeError: Cannot read properties of undefined (reading 'username')
+20220825	00:13:55	9f7b8a11-e63c-4cfa-8859-ca17da6eac92	TypeError: Cannot read properties of undefined (reading 'roles')

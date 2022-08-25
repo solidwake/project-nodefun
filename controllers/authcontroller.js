@@ -17,9 +17,15 @@ const handleLogin = async (req, res) => {
     // Evaluate password
     const match = await bcrypt.compare(pwd, foundUser.password);
     if (match) {
+        const roles = Object.values(foundUser.roles);
         // Create JWTs (access token and refresh token)
         const accessToken = jwt.sign(
-            { "username": foundUser.username },
+            {
+                "UserInfo": {
+                    "username": foundUser.username,
+                    "roles": roles
+                }
+            },
             process.env.ACCESS_TOKEN_SECRET,
             { expiresIn: '30s' } // Typically 5 to 15 minutes
         );
@@ -30,17 +36,17 @@ const handleLogin = async (req, res) => {
         );
         // Save the refresh token in the DB, which allows creation of a logout route that invalidates the refresh token when a user logs out
         const otherUsers = usersDB.users.filter(person => person.username !== foundUser.username);
-        const currentUser = { ...foundUser, refreshToken }            ;
+        const currentUser = { ...foundUser, refreshToken };
         usersDB.setUsers([...otherUsers, currentUser]);
         await fsPromises.writeFile(
             path.join(__dirname, '..', 'model', 'users.json'),
             JSON.stringify(usersDB.users)
         );
-        res.cookie('jwt', refreshToken, { httpOnly: true, sameSite: 'None', secure: true, maxAge: 24 * 60 * 60 * 1000 }); //! In production, use  { secure: true }
+        res.cookie('jwt', refreshToken, { httpOnly: true, sameSite: 'None', secure: true, maxAge: 24 * 60 * 60 * 1000 }); //! In production, use  { secure: true }, but { secure: true } does not work with Thunder Client when testing the refresh token
         res.json({ accessToken });
     } else {
         res.sendStatus(401);
     }
 }
 
-module.exports = { handleLogin };
+module.exports = { handleLogin }

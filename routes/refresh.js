@@ -4,4 +4,4 @@ const refreshTokenController = require('../controllers/refreshtokencontroller');
 
 router.get('/', refreshTokenController.handleRefreshToken);
 
-module.exports = router;
+module.exports = router
