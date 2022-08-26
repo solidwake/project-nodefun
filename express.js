@@ -8,11 +8,16 @@ const errorHandler = require('./middleware/errorhandler');
 const verifyJWT = require('./middleware/verifyjwt');
 const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
+const mongoose = require('mongoose');
+const connectDB = require('./config/dbconn');
 const dotenv = require('dotenv');
 
 dotenv.config({ path: './config/config.env' });
 
 const PORT = process.env.PORT || 3500;
+
+// Connect to MongoDB
+connectDB();
 
 // Custom middleware logger
 app.use(logger);
@@ -26,7 +31,7 @@ app.use(cors(corsOptions));
 
 // Built in Middleware to handle url encoded data (form data)
 // 'content-type: application/x-www-form-urlencoded'
-app.use(express.urlencoded({ extended:false }));
+app.use(express.urlencoded({ extended: false }));
 
 // Built in Middleware for JSON
 app.use(express.json());
@@ -80,7 +85,7 @@ app.all('*', (req, res) => {
         res.json({ error: '404 Not Found' });
     } else {
         res.type('txt').send('404 Not Found');
-    }  
+    }
 });
 
 /* app.use(function (err, req, res, next) {
@@ -90,4 +95,7 @@ app.all('*', (req, res) => {
 
 app.use(errorHandler);
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+mongoose.connection.once('open', () => {
+    console.log('Connected to MongoDB');
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+});
